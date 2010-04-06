@@ -42,10 +42,6 @@ module TodoIssuesControllerPatch
       #@todos = @project.todos.roots.find(:all, :conditions => ["issue_id = ?", @issue.id])
       show_without_todo
     end
-
-    def show_todos
-       render :partial => 'todos', :locals => { :todos => @todos }
-    end
   end
 
   def self.included(base) # :nodoc:
